@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>desktop</title>
+	<link rel="stylesheet" type="text/css" href="css/desktop.css">
+	<script type="text/javascript" src="js/operate.js"></script>
+</head>
+<body onload="init()">
+	<!-- 时钟 -->
+	<div class="clock">
+		<canvas id="circleClock" width="300" height="300"></canvas>
+		<script type="text/javascript" src="js/clock.js"></script>
+	</div>
+
+	<!-- 标语 -->
+	<div class="hello" id="hello">
+		<script type="text/javascript" src="js/hello.js"></script>
+	</div>
+
+	<!-- 任务清单 -->
+	<div class="list" id="todoList">
+		<div class="header" id="listHeader">Today</div>
+		<div class="num" id="taskNum"></div>
+		<button class="new" id="add" onclick="newTask()">add item</button>
+	</div>
+	
+	<!-- 通知栏 -->
+	<div class="modal" id="informModal">
+		<div id="pro"></div>
+		<div id="info"></div>
+	</div>
+
+	<!--清除缓存按钮 -->
+	<button class="operate" id="clear" onclick="clearAll()">Clear</button>
+	<button class="operate" id="detail" onclick="detail()">Details</button>
+	<button class="operate" id="refresh" onclick="window.location.reload()">Refresh</button>
+	<button class="operate" id="test" onclick="fade()" style="visibility: hidden;">test</button>
+</body>
+</html>
